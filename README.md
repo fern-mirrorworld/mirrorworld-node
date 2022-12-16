@@ -10,7 +10,7 @@ API documentation is available at <https://developer.mirrorworld.fun/>.
 
 ## Usage
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/node-ffceya?file=app.ts&view=editor)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/mirrorworld-typescript-example?file=app.ts&view=editor)
 
 ```
 npm install @fern-api/mirrorworld # or yarn add @fern-api/mirrorworld
