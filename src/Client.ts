@@ -4,8 +4,8 @@
 
 import * as environments from "./environments";
 import * as core from "./core";
-import { Client as AuthenticationClient } from "./resources/authentication/client/Client";
 import { Client as MarketplacesClient } from "./resources/marketplaces/client/Client";
+import { Client as AuthenticationClient } from "./resources/authentication/client/Client";
 
 export declare namespace MirrorworldApiClient {
   interface Options {
@@ -17,15 +17,15 @@ export declare namespace MirrorworldApiClient {
 export class MirrorworldApiClient {
   constructor(private readonly options: MirrorworldApiClient.Options) {}
 
-  #authentication: AuthenticationClient | undefined;
-
-  public get authentication(): AuthenticationClient {
-    return (this.#authentication ??= new AuthenticationClient(this.options));
-  }
-
   #marketplaces: MarketplacesClient | undefined;
 
   public get marketplaces(): MarketplacesClient {
     return (this.#marketplaces ??= new MarketplacesClient(this.options));
+  }
+
+  #authentication: AuthenticationClient | undefined;
+
+  public get authentication(): AuthenticationClient {
+    return (this.#authentication ??= new AuthenticationClient(this.options));
   }
 }
