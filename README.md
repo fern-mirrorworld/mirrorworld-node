@@ -2,7 +2,7 @@
 
 [![npm shield](https://img.shields.io/npm/v/@fern-api/mirrorworld)](https://www.npmjs.com/package/@fern-api/mirrorworld)
 
-This repository contains the unified Postman Collection for all the Mirror World APIs.
+This repository contains the unified Node.JS SDK for all the Mirror World APIs.
 
 ## Documentation
 
