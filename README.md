@@ -2,18 +2,36 @@
 
 [![npm shield](https://img.shields.io/npm/v/@fern-api/mirrorworld)](https://www.npmjs.com/package/@fern-api/mirrorworld)
 
+This repository contains the unified Node.JS SDK for all the Mirror World APIs.
+
 ## Documentation
 
 API documentation is available at <https://developer.mirrorworld.fun/>.
 
 ## Usage
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](TODO)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/node-ffceya?file=app.ts&view=editor)
+
+```
+npm install @fern-api/mirrorworld # or yarn add @fern-api/mirrorworld
+```
 
 ```typescript
-import { TODO } from "TODO";
+const client = new MirrorworldApiClient({
+    apiKey: 'YOUR_API_KEY_HERE',
+});
 
-const TODO
+const response = await client.marketplaces.mint.mintNft('devnet', {
+    collectionMint: '9pd6wUcfZpPBsrQFxqEkMjfbyaqraQRsiQtD8D4wqa6W',
+    name: 'new asset',
+    symbol: 'NA',
+    url: 'https://market-assets.mirrorworld.fun/gen1/1.json',
+});
+
+console.log(
+    'Received response from Mirror World!',
+    JSON.stringify(response, undefined, 4)
+);
 ```
 
 ## Beta status
