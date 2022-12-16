@@ -18,19 +18,19 @@ npm install @fern-api/mirrorworld # or yarn add @fern-api/mirrorworld
 
 ```typescript
 const client = new MirrorworldApiClient({
-apiKey: 'YOUR_API_KEY_HERE',
+    apiKey: 'YOUR_API_KEY_HERE',
 });
 
 const response = await client.marketplaces.mint.mintNft('devnet', {
-collectionMint: '9pd6wUcfZpPBsrQFxqEkMjfbyaqraQRsiQtD8D4wqa6W',
-name: 'new asset',
-symbol: 'NA',
-url: 'https://market-assets.mirrorworld.fun/gen1/1.json',
+    collectionMint: '9pd6wUcfZpPBsrQFxqEkMjfbyaqraQRsiQtD8D4wqa6W',
+    name: 'new asset',
+    symbol: 'NA',
+    url: 'https://market-assets.mirrorworld.fun/gen1/1.json',
 });
 
 console.log(
-'Received response from Mirror World!',
-JSON.stringify(response, undefined, 4)
+    'Received response from Mirror World!',
+    JSON.stringify(response, undefined, 4)
 );
 ```
 
