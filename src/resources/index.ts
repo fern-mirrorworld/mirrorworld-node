@@ -1,4 +1,2 @@
-export * as authorize from "./authorize";
-export * from "./authorize/types";
-export * as marketplace from "./marketplace";
-export * from "./marketplace/types";
+export * as authentication from "./authentication";
+export * as marketplaces from "./marketplaces";

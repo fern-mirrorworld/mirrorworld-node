@@ -1,0 +1,1 @@
+export { BindPaymentCodeRequest } from "./BindPaymentCodeRequest";
