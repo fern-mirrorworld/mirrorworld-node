@@ -18,6 +18,33 @@ export declare namespace Client {
 export class Client {
   constructor(private readonly options: Client.Options) {}
 
+  public async testEndpoint(
+    network: string,
+    request: MirrorworldApi.marketplaces.TestRequest
+  ): Promise<MirrorworldApi.marketplaces.mint.testEndpoint.Response> {
+    const _response = await core.fetcher({
+      url: urlJoin(this.options.environment ?? environments.Environment.Production, `/v1/${network}/solana//test`),
+      method: "POST",
+      headers: {
+        "X-API-Key": await core.Supplier.get(this.options.apiKey),
+      },
+      body: await serializers.marketplaces.mint.testEndpoint.Request.json({
+        myParameter: request.myParameter,
+      }),
+    });
+    if (_response.ok) {
+      return {
+        ok: true,
+        body: undefined,
+      };
+    }
+
+    return {
+      ok: false,
+      error: MirrorworldApi.marketplaces.mint.testEndpoint.Error._unknown(_response.error),
+    };
+  }
+
   public async mintNft(
     network: string,
     request: MirrorworldApi.marketplaces.MintWithCollectionReq
