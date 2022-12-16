@@ -3,7 +3,7 @@
  */
 
 export const Environment = {
-  Production: "https://api.mirrorworld.fun/v1",
+  Production: "https://api.mirrorworld.fun/",
 } as const;
 
 export type Environment = typeof Environment.Production;
